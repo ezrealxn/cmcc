@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CMS Report</title>
+</head>
+
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/echarts2.x/echarts-all.js"></script>
+<script src="js/echarts2.x/theme/dark.js"></script>
+<script type="text/javascript">
+    // ajax getting data...............
+    $.get("/recharge/", function (data) {
+        alert(data)
+        // 为echarts对象加载数据
+        $('#main').html(data);
+    });
+</script>
+</body>
+</html>
